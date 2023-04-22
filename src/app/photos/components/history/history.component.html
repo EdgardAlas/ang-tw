@@ -1,0 +1,16 @@
+<h2 class="text-4xl text-white font-bold">Historial</h2>
+<div
+  class="flex flex-col gap-4 mt-12"
+  *ngIf="history.length > 0; else noHistory"
+>
+  <app-history-button
+    *ngFor="let old of history"
+    [search]="old"
+  ></app-history-button>
+</div>
+
+<ng-template #noHistory>
+  <div class="bg-blue-300 p-4 rounded-md w-full mt-12">
+    <h2 class="text-xl">No hay historial para visualiar</h2>
+  </div>
+</ng-template>

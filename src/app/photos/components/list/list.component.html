@@ -1,0 +1,15 @@
+<ng-container *ngIf="photos.length > 0 && loaded; else noPhotos">
+  <h2 class="text-2xl mb-2">Resultados</h2>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+    <app-photo-card
+      *ngFor="let photo of photos"
+      [photo]="photo"
+    ></app-photo-card>
+  </div>
+</ng-container>
+
+<ng-template #noPhotos>
+  <div class="bg-orange-300 p-4 rounded-md max-w-2xl" *ngIf="loaded">
+    <h2 class="text-xl">No se encontraron fotos</h2>
+  </div>
+</ng-template>

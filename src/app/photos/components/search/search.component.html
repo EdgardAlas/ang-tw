@@ -1,0 +1,13 @@
+<div class="grid gap-4 mb-4">
+  <h1 class="text-4xl font-bold">Busqueda de fotos</h1>
+  <small>Las busquedas estan limitadas a 30 resultados</small>
+  <input
+    autocomplete="off"
+    type="text"
+    placeholder="Busqueda"
+    class="border py-3 px-4 border-black rounded-md"
+    [(ngModel)]="search"
+    id="search"
+    (keyup.enter)="onSearch()"
+  />
+</div>
